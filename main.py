@@ -12,5 +12,13 @@ app.secret_key = 'INSERTASECRETKEYASASTRING'
 def index():
     return ('Hello World')
 
+@app.route('/about', methods=['GET', 'POST'])
+def about():
+    return render_template("about.html")
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    return render_template("contact.html")
+
 if __name__ == '__main__':
     app.run()
